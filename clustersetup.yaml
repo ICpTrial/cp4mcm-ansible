@@ -1,5 +1,5 @@
 - hosts: all
   tasks:
-  - name: Emulate starting Online Banking Application
+  - name: list pods
   ansible.builtin.command
-      cmd: ansible-galaxy collection install community.kubernetes
+      cmd: kubectl get pods -n modresort
