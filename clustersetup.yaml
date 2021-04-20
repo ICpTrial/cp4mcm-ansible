@@ -5,7 +5,7 @@
 
   - name: Fetch Network Policy
     get_url:
-      url: https://github.com/ICpTrial/cp4mcm-ansible/blob/main/k8s/networkpolicy.yaml
+      url: https://raw.githubusercontent.com/ICpTrial/cp4mcm-ansible/main/k8s/networkpolicy.yaml
       dest: /tmp/networkpolicy.yaml
 
   - name: Apply Network Policy
