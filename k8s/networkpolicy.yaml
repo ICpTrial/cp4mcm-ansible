@@ -1,9 +1,12 @@
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
-namespace: private
 metadata:
-  name: default-deny-ingress
+  name: sample-networkpolicy
+  namespace: securens
 spec:
+  podSelector:
+    matchLabels:
+      role: securedb
   ingress:
   - from:
     - podSelector:
