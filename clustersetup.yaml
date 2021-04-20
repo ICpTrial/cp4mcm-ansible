@@ -1,4 +1,4 @@
 - hosts: all
   tasks:
   - name: Create a namespace
-      command: echo "hello"
+    command: kubectl get pods -n modresort
