@@ -1,6 +1,6 @@
 - hosts: all
   collections:
-    - community.kubernetes
+    - kubernetes.core
   tasks:
   - name: Create a namespace
     k8s:
