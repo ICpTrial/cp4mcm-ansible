@@ -1,4 +1,4 @@
 - hosts: all
   tasks:
   - name: Create a namespace
-    command: kubectl get pods -n modresort
+    command: /snap/bin/kubectl get pods -n modresort
