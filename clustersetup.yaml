@@ -1,4 +1,6 @@
 - hosts: all
+  roles:
+  - role: ansible.kubernetes-modules
   tasks:
     - name: Create a k8s namespace
       k8s:
