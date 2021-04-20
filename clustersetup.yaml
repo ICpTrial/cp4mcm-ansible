@@ -2,13 +2,11 @@
   tasks:
   - name: Create a namespace
     command: /snap/bin/kubectl create namespace securens
-    
-  tasks: 
+
   - name: Fetch Network Policy
     get_url:
       url: https://github.com/ICpTrial/cp4mcm-ansible/blob/main/k8s/networkpolicy.yaml
       dest: /tmp/networkpolicy.yaml
-        
-  tasks:
+
   - name: Apply Network Policy
     command: /snap/bin/kubectl apply -f /tmp/networkpolicy.yaml
