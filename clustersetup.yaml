@@ -1,5 +1,9 @@
 - hosts: all
   tasks: 
+  - name: install kubernetes plugin
+  ansible.builtin.command:
+    cmd: ansible-galaxy collection install shanemcd.kubernetes
+  
   # Configure Kubernetes Resource  
   - name: Create "demospace" namespace
   community.kubernetes.k8s:
