@@ -1,5 +1,4 @@
 - hosts: all
   tasks:
   - name: list pods
-  ansible.builtin.command
-      cmd: kubectl get pods -n modresort
+      command: kubectl get pods -n modresort
