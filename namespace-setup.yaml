@@ -7,4 +7,4 @@
     command: echo "oc login -t ${cluster_authtoken}"
 
   - name: Create a namespace
-    command: /usr/local/bin/oc create namespace ${namespace_name}"
+    command: /usr/local/bin/oc create namespace ${namespace_name}
