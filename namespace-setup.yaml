@@ -3,7 +3,7 @@
   tasks:
   - name: Login to Openshift
     command: echo "Log into {{ cluster_name }} cluster" >> /tmp/test.log
-    command: echo "oc login -t {{ cluster_authtoken }}" >> /tmp/test.log
-
+    command: oc login --token={{ cluster_authtoken }} --server=https://{{ api_server_host }}:{{ api_server_port }}
+    
   - name: Create a namespace
     command: /usr/local/bin/oc create namespace {{ namespace_name }}
