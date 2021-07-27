@@ -1,0 +1,15 @@
+
+## kubernetes module を使って、冪等性を保てる書き方教えてください
+
+- hosts: all
+  tasks:
+  - name: Create a namespace
+    command: /snap/bin/kubectl create namespace securens
+
+  - name: Fetch Network Policy
+    get_url:
+      url: https://raw.githubusercontent.com/ICpTrial/cp4mcm-ansible/main/k8s/networkpolicy.yaml
+      dest: /tmp/networkpolicy.yaml
+
+  - name: Apply Network Policy
+    command: /snap/bin/kubectl apply -f /tmp/networkpolicy.yaml
