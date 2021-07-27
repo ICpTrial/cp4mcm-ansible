@@ -1,6 +1,8 @@
 - hosts: all
   tasks:
+  - name: Login to Openshift
+    command: echo "Log into ${clsuter_name} cluster"
+    command: echo "oc login -t ${cluster_authtoken}
+
   - name: Create a namespace
-    command: echo "kubectl create namespace securens"
-
-
+    command: /usr/local/bin/oc create namespace ${namespace_name}"
