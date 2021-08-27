@@ -6,4 +6,4 @@
     command: oc login --token={{ cluster_authtoken }} --server=https://{{ api_server_host }}:{{ api_server_port }}
 
   - name: Set Quota to the namespace
-    command: /usr/local/bin/oc create -n {{ namespace_name }} quota jri-quota --hard=cpu={{ cpu_hard_limit }},memory={{ memory_hard_limit }}
+    command: /usr/local/bin/oc create -n {{ namespace_name }} quota bigblue-quota --hard=cpu={{ cpu_hard_limit }},memory={{ memory_hard_limit }}
