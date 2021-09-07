@@ -6,4 +6,3 @@
   - name: Refresh package lastet
     become: yes
     command: apt upgrade -y
-    
