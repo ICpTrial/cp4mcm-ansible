@@ -1,7 +1,7 @@
 - hosts: all
   tasks:
+  - name: fetch package update
+    command: apt update
   - name: Refresh package lastet
-    copy:
-      dest: "/home/ibmuser/rba-result.txt"
-      content: |
-        Successfully started Online Banking Application using Ansible playbook and Runbook automation!
+    command: apt upgrade -y
+    
