@@ -1,7 +1,9 @@
 - hosts: all
   tasks:
   - name: Fetch package update
-    command: sudo apt update
+    become: yes
+    command: apt update
   - name: Refresh package lastet
-    command: sudo apt upgrade -y
+    become: yes
+    command: apt upgrade -y
     
