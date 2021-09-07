@@ -1,7 +1,7 @@
 - hosts: all
   tasks:
-  - name: sudo fetch package update
-    command: apt update
+  - name: Fetch package update
+    command: sudo apt update
   - name: Refresh package lastet
     command: sudo apt upgrade -y
     
